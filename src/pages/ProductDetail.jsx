@@ -46,7 +46,7 @@ const DressViewer3D = () => {
     scene.add(hemiLight);
 
     const loader = new GLTFLoader();
-    loader.load('/wedding_dress.glb', (gltf) => {
+    loader.load(`${import.meta.env.BASE_URL}wedding_dress.glb`, (gltf) => {
       loadedModel = gltf.scene;
       const box = new THREE.Box3().setFromObject(loadedModel);
       const center = box.getCenter(new THREE.Vector3());
@@ -218,7 +218,7 @@ export default function ProductDetail() {
                         className="absolute inset-0 w-full h-full object-contain bg-black"
                         onEnded={() => setIsVideoEnded(true)}
                      >
-                        <source src="/rotating_bride_mp_.mp4" type="video/mp4" />
+                        <source src={`${import.meta.env.BASE_URL}rotating_bride_mp_.mp4`} type="video/mp4" />
                      </video>
                      
                      <AnimatePresence>

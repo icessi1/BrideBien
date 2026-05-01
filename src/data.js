@@ -4,11 +4,11 @@ export const PRODUCTS = [
     name: "Nirvana Gelinlik",
     category: "Gelinlik",
     price: "Özel Dikim",
-    image: "/nirvana1.jpeg",
+    image: `${import.meta.env.BASE_URL}nirvana1.jpeg`,
     images: [
-      "/nirvana1.jpeg",
-      "/nirvana2.jpeg",
-      "/nirvana3.jpeg"
+      `${import.meta.env.BASE_URL}nirvana1.jpeg`,
+      `${import.meta.env.BASE_URL}nirvana2.jpeg`,
+      `${import.meta.env.BASE_URL}nirvana3.jpeg`
     ],
     details: "El İşlemesi Kristaller & İpek Taffeta",
     description: "Nirvana modeli, modern kesimi geleneksel el işçiliği ile birleştiriyor. Her dikişinde bir hikaye gizli."

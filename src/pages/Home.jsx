@@ -77,10 +77,8 @@ const AbstractSculpture = () => {
     scene.add(light2);
 
     const loader = new GLTFLoader();
-    loader.load(
-      '/wedding_dress.glb',
-      (gltf) => {
-        loadedModel = gltf.scene;
+    loader.load(`${import.meta.env.BASE_URL}wedding_dress.glb`, (gltf) => {
+      loadedModel = gltf.scene;
         const box = new THREE.Box3().setFromObject(loadedModel);
         const center = box.getCenter(new THREE.Vector3());
         const size = box.getSize(new THREE.Vector3());
@@ -168,7 +166,7 @@ const ARTryOnPreview = () => {
   return (
     <div className="relative aspect-[3/4] md:aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black">
       <img
-        src="/ar-base.png"
+        src={`${import.meta.env.BASE_URL}ar-base.png`}
         alt="AR Gelinlik Provası"
         className="w-full h-full object-cover"
       />
@@ -181,7 +179,7 @@ const ARTryOnPreview = () => {
         }}
       >
         <img
-          src="/ar-dress.png"
+          src={`${import.meta.env.BASE_URL}ar-dress.png`}
           alt="AR Gelinlik Sonucu"
           className="w-full h-full object-cover"
         />
