@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Outfit:wght@200;300;400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --pearl: #fffcfb;
+  --dark-ink: #120f10;
+  --rose-gold: #d4a373; /* Refined to match logo's metallic warmth */
+  --rose-gold-light: #f5ebe0;
+  --logo-gold: #c68e9a; /* Logo specific rose gold */
+}
+
+#root {
+  position: relative;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--pearl);
+  color: var(--dark-ink);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Premium Gradients */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #c68e9a 0%, #e6c8cd 50%, #c68e9a 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(to right, #c68e9a, #e6c8cd, #c68e9a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shine 4s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Section Masks */
+.mask-radial {
+  mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+}
+
+.dark-section {
+  background-color: var(--dark-ink);
+  color: var(--pearl);
+}
+
+.stroke-text {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--logo-gold);
+  opacity: 0.5;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--pearl);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--logo-gold);
+  border-radius: 10px;
+}
